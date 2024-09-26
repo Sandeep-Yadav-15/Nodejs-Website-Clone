@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Node.js</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./mediaqueries.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Node.js</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor03">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./download.html">Download</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./resources/docs.html">Documentation</a></li>
+                            <li><a class="dropdown-item" href="./resources/tutorials.html">Tutorials</a></li>
+                            <li><a class="dropdown-item" href="./resources/community.html">Community</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-2" method="GET" action="/search">
+                    <input class="form-control me-sm-2" type="search" name="query" placeholder="Search" required>
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="display-3">Download Node.js®</h1>
+        <p class="lead">Download Node.js the way you want.</p>
+        <hr class="my-4">
+        <h4>Installation Instructions:</h4>
+        <pre>
+# installs fnm (Fast Node Manager)
+winget install Schniz.fnm
+
+# configure fnm environment
+fnm env --use-on-cd | Out-String | Invoke-Expression
+
+# download and install Node.js
+fnm use --install-if-missing 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
+        </pre>
+        <div class="alert alert-info mt-4" role="alert">
+            <strong>Note:</strong> Make sure to have the latest version of <a href="https://github.com/Schniz/fnm" target="_blank">fnm</a> for the best experience!
+        </div>
+        <div class="text-center mt-4">
+            <a href="https://nodejs.org/en/download/" class="btn btn-success btn-lg">Download Now</a>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <p class="text-center">© 2024 My Node App. All rights reserved.</p>
+            <a href="./privacy-policy.html" class="text-dark">Privacy Policy</a> | 
+            <a href="./terms-of-service.html" class="text-dark">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
